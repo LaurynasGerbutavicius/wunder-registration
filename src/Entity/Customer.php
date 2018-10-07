@@ -179,12 +179,12 @@ class Customer
         return $this;
     }
 
-    public function getPaymentDataId(): ?int
+    public function getPaymentDataId(): ?string
     {
         return $this->paymentDataId;
     }
 
-    public function setPaymentDataId(?int $paymentDataId): self
+    public function setPaymentDataId(?string $paymentDataId): self
     {
         $this->paymentDataId = $paymentDataId;
 

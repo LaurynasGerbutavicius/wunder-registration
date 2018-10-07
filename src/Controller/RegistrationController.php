@@ -43,7 +43,9 @@ class RegistrationController extends Controller
 
                 $flow->reset();
 
-                return new JsonResponse(['message' => 'created', 'id' => $customer->getId()]);
+                return $this->render('registration_status.html.twig', [
+                    'paymentDataId' => $customer->getPaymentDataId()
+                ]);
             }
         }
 

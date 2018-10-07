@@ -21,15 +21,15 @@ class RegistrationFlow extends FormFlow
     {
         return array(
             array(
-                'label' => 'basic',
+                'label' => 'Insert personal information',
                 'form_type' => RegistrationBasicType::class,
             ),
             array(
-                'label' => 'address',
+                'label' => 'Insert address information',
                 'form_type' => RegistrationAddressType::class,
             ),
             array(
-                'label' => 'payment',
+                'label' => 'Insert payment information',
                 'form_type' => RegistrationPaymentType::class,
             ),
         );
