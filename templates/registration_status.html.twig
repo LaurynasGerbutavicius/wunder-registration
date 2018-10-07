@@ -2,6 +2,10 @@
 
 {% block body %}
     <div class="container">
-        <div>Success! You have registered! paymentDataId: {{ paymentDataId }}</div>
+        {% if registration_successful %}
+            <div>Success! You have registered! paymentDataId: {{ payment_data_id }}</div>
+        {% else %}
+            <div>Sorry, but something went wrong cummunicating with remote API.</div>
+        {% endif %}
     </div>
 {% endblock %}

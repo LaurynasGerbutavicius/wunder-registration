@@ -39,12 +39,13 @@ class RegistrationController extends Controller
             if ($flow->nextStep()) {
                 $form = $flow->createForm();
             } else {
-                $model->register($customer);
+                $registrationSuccess = $model->register($customer);
 
                 $flow->reset();
 
                 return $this->render('registration_status.html.twig', [
-                    'paymentDataId' => $customer->getPaymentDataId()
+                    'payment_data_id' => $customer->getPaymentDataId(),
+                    'registration_successful' => $registrationSuccess
                 ]);
             }
         }
